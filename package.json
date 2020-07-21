@@ -1,24 +1,29 @@
 {
-  "name": "travel-agency-page",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tadasgo/travel-agency-page.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tadasgo/travel-agency-page/issues"
-  },
-  "homepage": "https://github.com/tadasgo/travel-agency-page#readme",
-  "dependencies": {
-    "lodash": "^4.17.19",
-    "normalize.css": "^8.0.1"
-  }
+	"name": "travel-agency-page",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tadasgo/travel-agency-page.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/tadasgo/travel-agency-page/issues"
+	},
+	"homepage": "https://github.com/tadasgo/travel-agency-page#readme",
+	"dependencies": {
+		"lodash": "^4.17.19",
+		"normalize.css": "^8.0.1"
+	},
+	"devDependencies": {
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.12"
+	}
 }
