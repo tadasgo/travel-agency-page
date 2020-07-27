@@ -3,10 +3,18 @@
 
 	&--gutters {
 		margin-right: -4em;
-	}
 
-	&--gutters > div {
-		padding-right: 4em;
+		& > div {
+			padding-right: 4em;
+		}
+
+		&-l {
+			margin-right: -6.25em;
+
+			& > div {
+				padding-right: 6.25em;
+			}
+		}
 	}
 
 	&__small--mb-m {
@@ -25,6 +33,11 @@
 			&--larger {
 				width: 37%;
 			}
+		}
+
+		&__medium-6 {
+			float: left;
+			width: 50%;
 		}
 
 		&__medium-8 {
