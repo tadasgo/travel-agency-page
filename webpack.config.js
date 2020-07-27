@@ -1,7 +1,7 @@
 // this is part of node library
 const path = require('path');
 // list post css plugins we want to use
-const postCSSPlugins = [require('postcss-import'), require('postcss-simple-vars'), require('postcss-nested'), require('autoprefixer')];
+const postCSSPlugins = [require('postcss-import'), require('postcss-mixins'), require('postcss-simple-vars'), require('postcss-nested'), require('autoprefixer')];
 
 module.exports = {
 	// where to look and which file to process
@@ -23,7 +23,7 @@ module.exports = {
 		// allow to inject new css or js into browsers memory
 		hot: true,
 		port: 9000,
-		// allow devices on the same network to access webpack dev server site bu your LOCAL ip adress
+		// allow devices on the same network to access webpack dev server site by your LOCAL ip adress
 		host: '0.0.0.0',
 	},
 	mode: 'development',
