@@ -10,6 +10,16 @@
 		max-width: 976px;
 	}
 
+	&--p-til-l {
+		padding-left: 0;
+		padding-right: 0;
+
+		@mixin atLarge {
+			padding-left: 1.25em;
+			padding-right: 1.25em;
+		}
+	}
+
 	/* Wrapper inside wrapper needs no padding */
 	.wrapper {
 		padding-left: 0;
