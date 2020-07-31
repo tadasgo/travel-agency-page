@@ -28,17 +28,62 @@
 		}
 	}
 
-	&__hamburger {
-		width: 20px;
-		height: 20px;
-		background-color: #fff;
+	&__nav-toggle {
+		padding: 0.7em 0.5em;
+		background: transparent;
+		border: 0;
+		cursor: pointer;
 		position: absolute;
-		top: 10px;
-		right: 10px;
-		z-index: 2;
+		right: 1em;
+		top: 1em;
+		z-index: 100;
+	}
+
+	&__hamburger {
+		display: block;
+		position: relative;
+
+		&,
+		&::before,
+		&::after {
+			background: #fff;
+			width: 2em;
+			height: 3px;
+			transition: transform 0.3s ease-out;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+		}
+
+		&::before {
+			top: 8px;
+		}
+
+		&::after {
+			bottom: 8px;
+		}
 
 		@mixin atMedium {
 			display: none;
+		}
+	}
+
+	&__nav-toggle--active {
+		.site-header__hamburger {
+			transform: rotate(225deg);
+
+			&::before {
+				transform: rotate(90deg) translateX(-8px);
+			}
+
+			&::after {
+				transform: scale(0);
+			}
 		}
 	}
 

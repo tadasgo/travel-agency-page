@@ -1,7 +1,7 @@
 // this is part of node library
 const path = require('path');
 // list post css plugins we want to use
-const postCSSPlugins = [require('postcss-import'), require('postcss-mixins'), require('postcss-simple-vars'), require('postcss-nested'), require('autoprefixer')];
+const postCSSPlugins = [require('postcss-import'), require('postcss-mixins'), require('postcss-simple-vars'), require('postcss-nested'), require('postcss-hexrgba'), require('autoprefixer')];
 
 module.exports = {
 	// where to look and which file to process
