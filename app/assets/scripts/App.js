@@ -8,8 +8,8 @@ import StickyHeader from './modules/StickyHeader';
 let modal;
 new Hamburger();
 new StickyHeader();
-new RevealOnScroll('.feature-item', 80);
-new RevealOnScroll('.testimonial', 70);
+new RevealOnScroll('.feature-item', 85);
+new RevealOnScroll('.testimonial', 80);
 
 // load modal only when needed
 document.querySelectorAll('.open-modal').forEach((el) =>
