@@ -17,7 +17,7 @@ document.querySelectorAll('.open-modal').forEach((el) =>
 		e.preventDefault();
 		// determine if modal was already downloaded (defined) if not load it
 		if (typeof modal === 'undefined') {
-			import('./modules/Modal')
+			import(/* webpackChunkName: "modal" */ './modules/Modal')
 				.then((file) => {
 					// instantiate modal class and then load it
 					modal = new file.default();
