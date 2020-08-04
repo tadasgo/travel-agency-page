@@ -27,7 +27,6 @@ class RevealOnScroll {
 	}
 
 	calcCaller() {
-		console.log('scroll function ran');
 		this.itemsToReveal.forEach((el) => {
 			// only run calculations if elements aren't yet revealed
 			if (!el.isRevealed) {
@@ -39,7 +38,6 @@ class RevealOnScroll {
 	calculateIfScrolledTo(el) {
 		// if screen bottom is already touching section we want to reveal ONLY THEN start calculations
 		if (window.scrollY + this.browserHeight > el.offsetTop) {
-			console.log('Element was calculated');
 			// how far into the browsers viewport the element was scrolled to
 			let scrollPercent = (el.getBoundingClientRect().top / this.browserHeight) * 100;
 			// reveal scrollPercent < hidden part of img
