@@ -1,5 +1,6 @@
 // import css file through js with a help of webpack - for development phase
 import '../styles/styles.css';
+import 'lazysizes';
 import Hamburger from './modules/Hamburger';
 import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
