@@ -1,8 +1,8 @@
 # Travel Agency Page
 
-​	Fictional travel agency index page build by leveraging Webpack, PostCSS, Babel.js, Lazy Loading and other amazing new technologies.
+​ Fictional travel agency index page built by leveraging Webpack, PostCSS, Babel.js, Lazy Loading and other amazing technologies.
 
-​	Things I learned during this project:
+​ Things I learned during this project:
 
 - Package management with NPM.
 - Better code organisation:
@@ -16,9 +16,6 @@
   - Asynchronous picture loading - loved the power Lazysizes package provides and simplicity of implementing it.
   - Setting up files for distribution - it was harder than I expected..
 
-
-
 ## Acknowledgments
 
-​	Thanks Brad Schiff for his amazing [course](https://www.udemy.com/course/git-a-web-developer-job-mastering-the-modern-workflow/ "Link to his course on Udemy") about everyday workflow and technologies of modern developers.
-
+​ Thanks Brad Schiff for his amazing [course](https://www.udemy.com/course/git-a-web-developer-job-mastering-the-modern-workflow/ 'Link to his course on Udemy') about everyday workflow and technologies of modern developers.
