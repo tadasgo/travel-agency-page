@@ -2,15 +2,11 @@ class Modal {
 	constructor() {
 		this.injectHTML();
 		this.modal = document.querySelector('.modal');
-		this.openModalBtns = document.querySelectorAll('.open-modal');
 		this.closeIcon = document.querySelector('.modal__close');
 		this.events();
 	}
 
 	events() {
-		// listen for openClick
-		this.openModalBtns.forEach((el) => el.addEventListener('click', (e) => this.openTheModal(e)));
-
 		// listen for closeClick
 		this.closeIcon.addEventListener('click', () => this.closeTheModal());
 
@@ -18,9 +14,7 @@ class Modal {
 		document.addEventListener('keyup', (e) => this.keyPressHandler(e));
 	}
 
-	openTheModal(e) {
-		// prevent default of a links
-		e.preventDefault();
+	openTheModal() {
 		this.modal.classList.add('modal--visible');
 	}
 

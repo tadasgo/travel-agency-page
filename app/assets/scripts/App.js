@@ -3,14 +3,32 @@ import '../styles/styles.css';
 import Hamburger from './modules/Hamburger';
 import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
-import Modal from './modules/Modal';
+
+let modal;
+new Hamburger();
+new StickyHeader();
+new RevealOnScroll('.feature-item', 80);
+new RevealOnScroll('.testimonial', 70);
+
+// load modal only when needed
+document.querySelectorAll('.open-modal').forEach((el) =>
+	el.addEventListener('click', (e) => {
+		e.preventDefault();
+		// determine if modal was already downloaded (defined) if not load it
+		if (typeof modal === 'undefined') {
+			import('./modules/Modal')
+				.then((file) => {
+					// instantiate modal class and then load it
+					modal = new file.default();
+					setTimeout(() => modal.openTheModal(), 20);
+				})
+				.catch(() => console.log('There was a problem loading modal'));
+		} else {
+			modal.openTheModal();
+		}
+	})
+);
 
 // accept updates on the fly (hot module replacements)
 // accept if it makes sense to accept...
 if (module.hot) module.hot.accept();
-
-const hamburger = new Hamburger();
-const stickyHeader = new StickyHeader();
-new RevealOnScroll('.feature-item', 80);
-new RevealOnScroll('.testimonial', 70);
-new Modal();
