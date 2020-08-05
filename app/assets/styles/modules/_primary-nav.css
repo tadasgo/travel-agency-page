@@ -36,7 +36,9 @@
 		}
 	}
 
-	&--right {
-		margin-left: auto;
+	@mixin atMedium {
+		&--right {
+			margin-left: auto;
+		}
 	}
 }
