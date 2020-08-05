@@ -119,8 +119,6 @@
 			align-items: center;
 
 			@mixin atMedium {
-				justify-content: right;
-				align-items: center;
 				flex-direction: initial;
 				padding-top: 0;
 				opacity: 1;
