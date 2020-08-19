@@ -11,7 +11,7 @@ exports.handler = (event, context, callback) => {
 		body = {};
 	}
 
-	if (body.password === 'pass123') {
+	if (body.password === 'yoursecretpass') {
 		callback(null, {
 			statusCode: 200,
 			body: 'Welcome to the secret area',

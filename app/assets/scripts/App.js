@@ -4,8 +4,10 @@ import 'lazysizes';
 import Hamburger from './modules/Hamburger';
 import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
+import ClientArea from './modules/ClientArea';
 
 let modal;
+new ClientArea();
 new Hamburger();
 new StickyHeader();
 new RevealOnScroll('.feature-item', 85);
