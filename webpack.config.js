@@ -47,7 +47,20 @@ const config = {
 	plugins: pages,
 	// tell webpack what to do when it runs into certain files
 	module: {
-		rules: [cssConfig],
+		rules: [
+			cssConfig,
+			{
+				// add js compiler to make our js backwards compatible and understand react
+				test: /\.js$/i,
+				exclude: /(node_modules)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-react', '@babel/preset-env'],
+					},
+				},
+			},
+		],
 	},
 };
 
@@ -81,18 +94,6 @@ if (currentTask === 'dev') {
 }
 
 if (currentTask === 'build') {
-	// add js compiler to make our js backwards compatible
-	config.module.rules.push({
-		test: /\.js$/i,
-		exclude: /(node_modules)/,
-		use: {
-			loader: 'babel-loader',
-			options: {
-				presets: ['@babel/preset-env'],
-			},
-		},
-	});
-
 	// for build - extract css
 	cssConfig.use.unshift(MiniCssExtractPlugin.loader);
 	// leverage cssnano to compress css file

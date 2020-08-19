@@ -5,6 +5,15 @@ import Hamburger from './modules/Hamburger';
 import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
 
+// REACT related code
+import React from 'react';
+import ReactDOM from 'react-dom';
+// Import react components
+import AmazingComponent from './modules/AmazingComponent';
+
+// component which we want to render and where we want to render
+ReactDOM.render(<AmazingComponent />, document.querySelector('#react'));
+
 let modal;
 new Hamburger();
 new StickyHeader();
